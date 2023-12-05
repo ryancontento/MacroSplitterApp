@@ -15,7 +15,7 @@ jobs:
         dotnet-version: 7.x
     - name: Publish with dotnet
       run: dotnet publish --configuration Release --output build
-    - name: MacroSplitterApp
+    - name: Deploy to Github Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: $

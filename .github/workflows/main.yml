@@ -18,6 +18,6 @@ jobs:
         dotnet-version: 7.x
          # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish BlazorGitHubPagesDemo.csproj -c Release -o release --nologo
+      run: dotnet publish MacroSplitterApp.csproj -c Release -o release --nologo
 
     

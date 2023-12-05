@@ -1,0 +1,68 @@
+<h3>Macro Splitter</h3>
+
+<div style="width: 35%;">
+
+<div style="padding: .5rem;">
+    <MudTextField @bind-Value="proteinGrams" 
+    Label="Protein"
+    Variant="Variant.Outlined" 
+    Margin="Margin.Dense" />
+</div>
+
+<div style="padding: .5rem;">
+    <MudTextField @bind-Value="carbGrams" 
+    Label="Carbohydrate" 
+    Variant="Variant.Outlined" 
+    Margin="Margin.Dense" />
+</div>
+
+<div style="padding: .5rem;">
+    <MudTextField @bind-Value="fatGrams" 
+    Label="Fat"
+    Variant="Variant.Outlined"
+    Margin="Margin.Dense" />
+</div>
+
+<div style="padding: .5rem;">
+    <MudTextField @bind-Value="mealsPerDay" 
+    Label="Meals Per Day" 
+    Variant="Variant.Outlined"
+    Margin="Margin.Dense" />
+</div>
+
+<MudButton OnClick="CalculateMacrosPerMeal"
+Variant="Variant.Outlined" 
+Color="Color.Primary">
+    Calculate Meals
+</MudButton>
+
+<div>
+    Protein Grams per Meal: @proteinGramsPerMeal.ToString("N2")
+</div>
+<div>
+    Carbohydrate Grams per Meal: @carbGramsPerMeal.ToString("N2")
+</div>
+<div>
+    Fat Grams per Meal: @fatGramsPerMeal.ToString("N2")
+</div>
+
+
+</div>
+
+@code {
+
+    private double proteinGrams = 0;
+    private double proteinGramsPerMeal = 0;
+    private double carbGrams = 0;
+    private double carbGramsPerMeal = 0;
+    private double fatGrams = 0;
+    private double fatGramsPerMeal = 0;
+    private double mealsPerDay = 0;
+
+    private void CalculateMacrosPerMeal()
+    {
+        proteinGramsPerMeal = proteinGrams / mealsPerDay;
+        carbGramsPerMeal = carbGrams / mealsPerDay;
+        fatGramsPerMeal = fatGrams / mealsPerDay;
+    }
+}

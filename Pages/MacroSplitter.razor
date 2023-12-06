@@ -1,50 +1,61 @@
 <h3>Macro Splitter</h3>
 
-<div style="width: 35%;">
+<div class="main-container">
 
-<div style="padding: .5rem;">
-    <MudTextField @bind-Value="proteinGrams" 
-    Label="Protein"
-    Variant="Variant.Outlined" 
-    Margin="Margin.Dense" />
-</div>
+    <div style="padding: .5rem;">
+        <MudTextField @bind-Value="proteinGrams" Label="Protein" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </div>
 
-<div style="padding: .5rem;">
-    <MudTextField @bind-Value="carbGrams" 
-    Label="Carbohydrate" 
-    Variant="Variant.Outlined" 
-    Margin="Margin.Dense" />
-</div>
+    <div style="padding: .5rem;">
+        <MudTextField @bind-Value="carbGrams" Label="Carbohydrate" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </div>
 
-<div style="padding: .5rem;">
-    <MudTextField @bind-Value="fatGrams" 
-    Label="Fat"
-    Variant="Variant.Outlined"
-    Margin="Margin.Dense" />
-</div>
+    <div style="padding: .5rem;">
+        <MudTextField @bind-Value="fatGrams" Label="Fat" Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </div>
 
-<div style="padding: .5rem;">
-    <MudTextField @bind-Value="mealsPerDay" 
-    Label="Meals Per Day" 
-    Variant="Variant.Outlined"
-    Margin="Margin.Dense" />
-</div>
+    <div style="padding: .5rem;">
+        <MudTextField @bind-Value="mealsPerDay" Label="Meals Per Day" Variant="Variant.Outlined"
+            Margin="Margin.Dense" />
+    </div>
 
-<MudButton OnClick="CalculateMacrosPerMeal"
-Variant="Variant.Outlined" 
-Color="Color.Primary">
-    Calculate Meals
-</MudButton>
+    <div style="padding: .5rem;">
+        <MudTextField @bind-Value="mealsPerDay" Label="Percentage of carbohydrate pre-workout"
+            Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </div>
 
-<div>
-    Protein Grams per Meal: @proteinGramsPerMeal.ToString("N2")
-</div>
-<div>
-    Carbohydrate Grams per Meal: @carbGramsPerMeal.ToString("N2")
-</div>
-<div>
-    Fat Grams per Meal: @fatGramsPerMeal.ToString("N2")
-</div>
+    <div style="padding: .5rem;">
+        <MudTextField @bind-Value="mealsPerDay" Label="Percentage of carbohydrate post-workout"
+            Variant="Variant.Outlined" Margin="Margin.Dense" />
+    </div>
+
+    <div>
+        <MudForm>
+            <MudRadioGroup @bind-SelectedOption="@SelectedOption">
+                <MudRadio Option="@("Radio 1")" Color="Color.Primary">Include Pre-Workout Carb Percentage</MudRadio>
+                <MudRadio Option="@("Radio 2")" Color="Color.Primary">Include Post-Workout Carb Percentage</MudRadio>
+            </MudRadioGroup>
+        </MudForm>
+
+        <div class="d-flex align-center">
+            <MudButton Variant="Variant.Outlined" OnClick="Reset">Reset</MudButton>
+            <MudText Class="ml-4">Selected Option: @SelectedOption</MudText>
+        </div>
+    </div>
+
+    <MudButton OnClick="CalculateMacrosPerMeal" Variant="Variant.Outlined" Color="Color.Primary">
+        Calculate Meals
+    </MudButton>
+
+    <div>
+        Protein Grams per Meal: @proteinGramsPerMeal.ToString("N2")
+    </div>
+    <div>
+        Carbohydrate Grams per Meal: @carbGramsPerMeal.ToString("N2")
+    </div>
+    <div>
+        Fat Grams per Meal: @fatGramsPerMeal.ToString("N2")
+    </div>
 
 
 </div>
@@ -58,11 +69,19 @@ Color="Color.Primary">
     private double fatGrams = 0;
     private double fatGramsPerMeal = 0;
     private double mealsPerDay = 0;
+    private int preWorkoutCarbPercent = 0;
+    private int postWorkoutCarbPercent = 0;
+    public string? SelectedOption { get; set; }
 
     private void CalculateMacrosPerMeal()
     {
         proteinGramsPerMeal = proteinGrams / mealsPerDay;
         carbGramsPerMeal = carbGrams / mealsPerDay;
         fatGramsPerMeal = fatGrams / mealsPerDay;
+    }
+
+    private void Reset()
+    {
+        SelectedOption = null;
     }
 }

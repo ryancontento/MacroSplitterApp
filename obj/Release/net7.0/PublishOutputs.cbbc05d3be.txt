@@ -1,1 +1,0 @@
-/Users/ryancontento/Projects/MacroSplitterApp/bin/Release/net7.0/publish/web.config

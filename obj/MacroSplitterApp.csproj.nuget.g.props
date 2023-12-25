@@ -17,7 +17,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly/7.0.2/build/net7.0/Microsoft.AspNetCore.Components.WebAssembly.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webassembly/7.0.2/build/net7.0/Microsoft.AspNetCore.Components.WebAssembly.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <PkgPublishSPAforGitHubPages_Build Condition=" '$(PkgPublishSPAforGitHubPages_Build)' == '' ">/Users/ryancontento/.nuget/packages/publishspaforgithubpages.build/2.1.1</PkgPublishSPAforGitHubPages_Build>
     <PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer Condition=" '$(PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer)' == '' ">/Users/ryancontento/.nuget/packages/microsoft.aspnetcore.components.webassembly.devserver/7.0.2</PkgMicrosoft_AspNetCore_Components_WebAssembly_DevServer>
   </PropertyGroup>
 </Project>

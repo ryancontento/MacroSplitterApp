@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SrLtSOAybnEc37OtCkTTNacrJvdqyD1ajHklO6tlCY8XS8jEFi4akwUa24n0WBprtZcus8/6p3OvbjxJznaXEg==",
+  "dgSpecHash": "0yAqSkNOzPWQ64r8Ac2lo8cX+D3pM/2ZgkgKXi7mz/OqDKrbLD+tLv428+c8wdNnDiMFR3Yy8foHmmlLsgojWw==",
   "success": true,
   "projectFilePath": "/Users/ryancontento/Projects/MacroSplitterApp/MacroSplitterApp.csproj",
   "expectedPackageFiles": [
@@ -31,7 +31,6 @@
     "/Users/ryancontento/.nuget/packages/microsoft.jsinterop/7.0.5/microsoft.jsinterop.7.0.5.nupkg.sha512",
     "/Users/ryancontento/.nuget/packages/microsoft.jsinterop.webassembly/7.0.2/microsoft.jsinterop.webassembly.7.0.2.nupkg.sha512",
     "/Users/ryancontento/.nuget/packages/mudblazor/6.11.1/mudblazor.6.11.1.nupkg.sha512",
-    "/Users/ryancontento/.nuget/packages/publishspaforgithubpages.build/2.1.1/publishspaforgithubpages.build.2.1.1.nupkg.sha512",
     "/Users/ryancontento/.nuget/packages/system.io.pipelines/7.0.0/system.io.pipelines.7.0.0.nupkg.sha512",
     "/Users/ryancontento/.nuget/packages/system.text.encodings.web/7.0.0/system.text.encodings.web.7.0.0.nupkg.sha512",
     "/Users/ryancontento/.nuget/packages/system.text.json/7.0.0/system.text.json.7.0.0.nupkg.sha512"
